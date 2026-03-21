@@ -14,11 +14,11 @@ body{font-family:'Inter',sans-serif;background:#00010a;color:#fff;overflow-x:hid
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
 .nav-logo{display:flex;align-items:center;gap:0.55rem;text-decoration:none;}
-.nav-logo-img{width:26px;height:26px;filter:invert(1);opacity:0.85;}
+.nav-logo svg{opacity:0.88;flex-shrink:0;}
 .nav-logo-text{font-family:'Syne',sans-serif;font-size:1.08rem;font-weight:700;color:#fff;letter-spacing:-0.01em;}
 .nav-logo-text span{color:rgba(255,255,255,0.25);}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
-.nav-links a{font-size:0.8rem;font-weight:400;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s;letter-spacing:0.01em;}
+.nav-links a{font-size:0.8rem;font-weight:400;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:#fff;}
 .nav-cta{padding:0.42rem 1.1rem;border:1px solid rgba(255,255,255,0.16);border-radius:6px;color:rgba(255,255,255,0.72)!important;}
 .nav-cta:hover{border-color:rgba(255,255,255,0.42)!important;color:#fff!important;}
@@ -60,10 +60,9 @@ canvas#starfield{position:absolute;inset:0;width:100%;height:100%;}
 /* FOCUS */
 #focus{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);}
 .focus-hdr{text-align:center;margin-bottom:4rem;}
-.focus-hdr .sec-title{font-size:clamp(1.7rem,3vw,2.5rem);}
 .focus-sub{font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.26);max-width:420px;margin:0 auto;line-height:1.78;}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);border-radius:16px;overflow:hidden;}
-.card{background:#00010a;padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;cursor:default;}
+.card{background:#00010a;padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;}
 .card:hover{background:#000820;}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(100,160,255,0.55),transparent);opacity:0;transition:opacity 0.4s;}
 .card:hover::before{opacity:1;}
@@ -71,8 +70,7 @@ canvas#starfield{position:absolute;inset:0;width:100%;height:100%;}
 .card-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(100,160,255,0.58);margin-bottom:0.55rem;}
 .card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:-0.02em;color:#fff;margin-bottom:0.75rem;line-height:1.25;}
 .card p{font-size:0.82rem;font-weight:300;color:rgba(255,255,255,0.26);line-height:1.78;}
-/* Learn more — scrolls to contact */
-.card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.16);transition:color 0.2s;text-decoration:none;cursor:pointer;}
+.card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.16);transition:color 0.2s;text-decoration:none;}
 .card:hover .card-link{color:rgba(255,255,255,0.55);}
 
 /* PHILOSOPHY */
@@ -130,7 +128,7 @@ canvas#starfield{position:absolute;inset:0;width:100%;height:100%;}
 /* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
 .footer-logo{display:flex;align-items:center;gap:0.5rem;}
-.footer-logo-img{width:20px;height:20px;filter:invert(1);opacity:0.3;}
+.footer-logo svg{opacity:0.25;}
 .footer-logo-text{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:rgba(255,255,255,0.22);letter-spacing:-0.01em;}
 .footer-logo-text span{color:rgba(255,255,255,0.06);}
 .footer-links{display:flex;gap:2rem;list-style:none;}
@@ -168,7 +166,17 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img class="nav-logo-img" src="data:image/png;base64,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" alt="AnatolAI">
+    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="18" stroke="white" stroke-width="5"/>
+      <line x1="50" y1="8" x2="50" y2="22" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="50" y1="78" x2="50" y2="92" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="8" y1="50" x2="22" y2="50" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="78" y1="50" x2="92" y2="50" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="21" y1="21" x2="31" y2="31" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="69" y1="69" x2="79" y2="79" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="21" y1="79" x2="31" y2="69" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="69" y1="31" x2="79" y2="21" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    </svg>
     <span class="nav-logo-text">AnatolAI<span>.</span></span>
   </a>
   <ul class="nav-links" id="navLinks">
@@ -187,7 +195,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
   <canvas id="starfield"></canvas>
   <div class="earth-glow"></div>
   <div class="atmo"></div>
-
   <svg class="sat" style="top:20%;right:11%;width:46px;height:46px;" viewBox="0 0 80 80">
     <rect x="10" y="28" width="20" height="16" rx="2" fill="#0d1e3a" stroke="#2a4a8a" stroke-width="0.8"/>
     <line x1="14" y1="28" x2="14" y2="44" stroke="#2a4a8a" stroke-width="0.5"/><line x1="19" y1="28" x2="19" y2="44" stroke="#2a4a8a" stroke-width="0.5"/><line x1="24" y1="28" x2="24" y2="44" stroke="#2a4a8a" stroke-width="0.5"/>
@@ -211,7 +218,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
     <path d="M105 175 Q225 370 390 635" fill="none" stroke="rgba(100,160,255,0.05)" stroke-width="1" stroke-dasharray="4 7"/>
     <ellipse cx="400" cy="710" rx="490" ry="190" fill="none" stroke="rgba(80,140,255,0.05)" stroke-width="1" stroke-dasharray="6 10"/>
   </svg>
-
   <div class="hero-content">
     <div class="badge"><span class="bdot"></span>Next-Generation Wireless &amp; AI Research</div>
     <h1 class="hero-title">
@@ -241,7 +247,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
       <p class="focus-sub">We specialise in three interconnected domains shaping the future of wireless connectivity — from orbit to the ground.</p>
     </div>
     <div class="cards reveal">
-
       <div class="card">
         <div class="card-icon">
           <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -268,7 +273,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p>Developing AI-powered solutions for LEO satellite links, High-Altitude Platform Stations, and seamless satellite-to-ground handover — the backbone of 6G connectivity.</p>
         <a class="card-link" href="#contact">Work with us →</a>
       </div>
-
       <div class="card">
         <div class="card-icon">
           <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -282,14 +286,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
             <rect x="12" y="18" width="4" height="4" rx="1" fill="#2a5a2a"/><rect x="56" y="18" width="4" height="4" rx="1" fill="#2a5a2a"/>
             <rect x="12" y="50" width="4" height="4" rx="1" fill="#2a5a2a"/><rect x="56" y="50" width="4" height="4" rx="1" fill="#2a5a2a"/>
             <rect x="20" y="20" width="32" height="32" rx="3" fill="#111a11" stroke="#2a5a2a" stroke-width="1"/>
-            <rect x="24" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="30" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="36" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="42" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="24" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="30" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="36" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="42" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="17" y="24" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="17" y="30" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="17" y="36" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="17" y="42" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="52" y="24" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="52" y="30" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
-            <rect x="52" y="36" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="52" y="42" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
+            <rect x="24" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="30" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="36" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="42" y="17" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
+            <rect x="24" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="30" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="36" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="42" y="52" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
+            <rect x="17" y="24" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="17" y="30" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="17" y="36" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="17" y="42" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
+            <rect x="52" y="24" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="52" y="30" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="52" y="36" width="3" height="3" rx="0.5" fill="#3a6a3a"/><rect x="52" y="42" width="3" height="3" rx="0.5" fill="#3a6a3a"/>
             <rect x="24" y="24" width="24" height="24" rx="2" fill="#0d150d" stroke="#2a5a2a" stroke-width="0.5"/>
             <line x1="30" y1="24" x2="30" y2="48" stroke="#1a3a1a" stroke-width="0.4"/><line x1="36" y1="24" x2="36" y2="48" stroke="#1a3a1a" stroke-width="0.4"/><line x1="42" y1="24" x2="42" y2="48" stroke="#1a3a1a" stroke-width="0.4"/>
             <line x1="24" y1="30" x2="48" y2="30" stroke="#1a3a1a" stroke-width="0.4"/><line x1="24" y1="36" x2="48" y2="36" stroke="#1a3a1a" stroke-width="0.4"/><line x1="24" y1="42" x2="48" y2="42" stroke="#1a3a1a" stroke-width="0.4"/>
@@ -303,7 +303,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p>Bringing AI inference directly onto drones, IoT devices, and network edge nodes — so decisions happen where the data is, without waiting for the cloud.</p>
         <a class="card-link" href="#contact">Work with us →</a>
       </div>
-
       <div class="card">
         <div class="card-icon">
           <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -340,7 +339,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p>Using machine learning to make wireless networks self-aware — predicting congestion, optimising handovers, and adapting in real time across heterogeneous infrastructures.</p>
         <a class="card-link" href="#contact">Work with us →</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -427,27 +425,15 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p class="contact-desc">Whether you're a potential collaborator, a researcher, or simply curious about what we do — we'd love to hear from you. We read every message.</p>
         <div class="info-items">
           <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-              </svg>
-            </div>
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
             <div><div class="info-lbl">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/company/www.anatolai.com/" target="_blank">AnatolAI on LinkedIn ↗</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
-                <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-            </div>
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
             <div><div class="info-lbl">Instagram</div><div class="info-val"><a href="https://www.instagram.com/anatol.ai/" target="_blank">@anatol.ai ↗</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
+            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div><div class="info-lbl">Location</div><div class="info-val">Ankara, Türkiye</div></div>
           </div>
         </div>
@@ -483,7 +469,17 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
-    <img class="footer-logo-img" src="data:image/png;base64,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" alt="AnatolAI">
+    <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="18" stroke="white" stroke-width="5"/>
+      <line x1="50" y1="8" x2="50" y2="22" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="50" y1="78" x2="50" y2="92" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="8" y1="50" x2="22" y2="50" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="78" y1="50" x2="92" y2="50" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="21" y1="21" x2="31" y2="31" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="69" y1="69" x2="79" y2="79" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="21" y1="79" x2="31" y2="69" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <line x1="69" y1="31" x2="79" y2="21" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    </svg>
     <span class="footer-logo-text">AnatolAI<span>.</span></span>
   </div>
   <ul class="footer-links">
@@ -496,7 +492,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 </footer>
 
 <script>
-// Starfield
 const canvas=document.getElementById('starfield');
 const ctx=canvas.getContext('2d');
 function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
@@ -528,12 +523,8 @@ function draw(){
   requestAnimationFrame(draw);
 }
 draw();
-
-// Scroll reveal
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// Mobile nav
 function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
 </script>
 </body>
