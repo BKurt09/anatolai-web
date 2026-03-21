@@ -5,135 +5,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AnatolAI — Ancient Wisdom. Future Intelligence.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:#00010a;color:#fff;overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;background:#00010a;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
-.nav-logo{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-0.01em;text-decoration:none;}
-.nav-logo span{color:rgba(255,255,255,0.28);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+.nav-logo{display:flex;align-items:center;gap:0.55rem;text-decoration:none;}
+.nav-logo-img{width:26px;height:26px;filter:invert(1);opacity:0.85;}
+.nav-logo-text{font-family:'Syne',sans-serif;font-size:1.08rem;font-weight:700;color:#fff;letter-spacing:-0.01em;}
+.nav-logo-text span{color:rgba(255,255,255,0.25);}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
-.nav-links a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.nav-links a{font-size:0.8rem;font-weight:400;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.2s;letter-spacing:0.01em;}
 .nav-links a:hover{color:#fff;}
-.nav-cta{padding:0.4rem 1.1rem;border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:rgba(255,255,255,0.7)!important;}
-.nav-cta:hover{border-color:rgba(255,255,255,0.4)!important;color:#fff!important;}
+.nav-cta{padding:0.42rem 1.1rem;border:1px solid rgba(255,255,255,0.16);border-radius:6px;color:rgba(255,255,255,0.72)!important;}
+.nav-cta:hover{border-color:rgba(255,255,255,0.42)!important;color:#fff!important;}
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
 .nav-burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,0.5);}
 
 /* HERO */
 #hero{min-height:100vh;position:relative;overflow:hidden;display:flex;flex-direction:column;}
 canvas#starfield{position:absolute;inset:0;width:100%;height:100%;}
-.earth-glow{position:absolute;bottom:-180px;left:50%;transform:translateX(-50%);width:900px;height:360px;border-radius:50%;background:radial-gradient(ellipse at center top,rgba(30,80,180,0.28) 0%,rgba(10,40,100,0.12) 40%,transparent 70%);pointer-events:none;}
-.atmo{position:absolute;bottom:-160px;left:50%;transform:translateX(-50%);width:860px;height:320px;border-radius:50%;border:1px solid rgba(80,140,255,0.09);pointer-events:none;}
-.sat{position:absolute;z-index:4;opacity:0.65;}
+.earth-glow{position:absolute;bottom:-180px;left:50%;transform:translateX(-50%);width:900px;height:360px;border-radius:50%;background:radial-gradient(ellipse at center top,rgba(30,80,180,0.26) 0%,rgba(10,40,100,0.1) 40%,transparent 70%);pointer-events:none;}
+.atmo{position:absolute;bottom:-160px;left:50%;transform:translateX(-50%);width:860px;height:320px;border-radius:50%;border:1px solid rgba(80,140,255,0.08);pointer-events:none;}
+.sat{position:absolute;z-index:4;opacity:0.62;}
 .hero-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10rem 2rem 6rem;flex:1;}
-.badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.28rem 0.9rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:100px;font-size:0.68rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;margin-bottom:2.5rem;}
+.badge{display:inline-flex;align-items:center;gap:0.5rem;padding:0.26rem 0.9rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:100px;font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.42);letter-spacing:0.04em;margin-bottom:2.5rem;}
 .bdot{width:5px;height:5px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:blink 2s ease infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;line-height:1.0;letter-spacing:-0.03em;margin-bottom:0.5rem;}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;line-height:1.0;letter-spacing:-0.035em;margin-bottom:0.5rem;}
 .hero-title .l1{color:#fff;display:block;}
-.hero-title .l2{color:rgba(255,255,255,0.22);display:block;}
-.hero-div{width:32px;height:1px;background:rgba(255,255,255,0.15);margin:1.5rem auto;}
-.hero-desc{font-size:0.92rem;color:rgba(255,255,255,0.38);max-width:440px;line-height:1.8;font-weight:300;margin-bottom:2.8rem;}
+.hero-title .l2{color:rgba(255,255,255,0.2);display:block;}
+.hero-div{width:28px;height:1px;background:rgba(255,255,255,0.14);margin:1.4rem auto;}
+.hero-desc{font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.36);max-width:460px;line-height:1.82;margin-bottom:2.8rem;}
 .hero-actions{display:flex;gap:0.75rem;justify-content:center;margin-bottom:4rem;}
-.btn-p{padding:0.68rem 1.5rem;background:#fff;color:#000;font-size:0.78rem;font-weight:600;border:none;border-radius:7px;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;transition:opacity 0.2s;display:inline-block;}
-.btn-p:hover{opacity:0.85;}
-.btn-s{padding:0.68rem 1.5rem;background:transparent;color:rgba(255,255,255,0.45);font-size:0.78rem;border:1px solid rgba(255,255,255,0.1);border-radius:7px;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;transition:all 0.2s;display:inline-block;}
-.btn-s:hover{border-color:rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);}
-.hero-stats{display:flex;border-top:1px solid rgba(255,255,255,0.06);width:100%;max-width:580px;}
+.btn-p{padding:0.7rem 1.6rem;background:#fff;color:#000;font-size:0.8rem;font-weight:600;border:none;border-radius:7px;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;transition:opacity 0.2s;display:inline-block;letter-spacing:-0.01em;}
+.btn-p:hover{opacity:0.84;}
+.btn-s{padding:0.7rem 1.6rem;background:transparent;color:rgba(255,255,255,0.42);font-size:0.8rem;font-weight:400;border:1px solid rgba(255,255,255,0.1);border-radius:7px;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;transition:all 0.2s;display:inline-block;}
+.btn-s:hover{border-color:rgba(255,255,255,0.26);color:rgba(255,255,255,0.72);}
+.hero-stats{display:flex;border-top:1px solid rgba(255,255,255,0.06);width:100%;max-width:600px;}
 .stat{flex:1;padding:1.4rem 0.5rem;text-align:center;border-right:1px solid rgba(255,255,255,0.06);}
 .stat:last-child{border-right:none;}
-.stat-num{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:0.25rem;}
-.stat-label{font-size:0.58rem;color:rgba(255,255,255,0.2);letter-spacing:0.08em;text-transform:uppercase;}
+.stat-num{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:0.28rem;}
+.stat-label{font-size:0.58rem;font-weight:400;color:rgba(255,255,255,0.2);letter-spacing:0.08em;text-transform:uppercase;}
 
 /* COMMON */
 .container{max-width:1000px;margin:0 auto;padding:0 2rem;}
-.sec-label{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(100,160,255,0.7);margin-bottom:1rem;}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.1;margin-bottom:1rem;}
-.sec-title span{color:rgba(255,255,255,0.2);}
+.sec-label{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(100,160,255,0.65);margin-bottom:0.9rem;}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.1;margin-bottom:1rem;}
+.sec-title span{color:rgba(255,255,255,0.18);}
 
 /* FOCUS */
 #focus{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);}
 .focus-hdr{text-align:center;margin-bottom:4rem;}
-.focus-sub{font-size:0.88rem;color:rgba(255,255,255,0.28);max-width:400px;margin:0 auto;line-height:1.75;font-weight:300;}
+.focus-hdr .sec-title{font-size:clamp(1.7rem,3vw,2.5rem);}
+.focus-sub{font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.26);max-width:420px;margin:0 auto;line-height:1.78;}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);border-radius:16px;overflow:hidden;}
-.card{background:#00010a;padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.card{background:#00010a;padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;cursor:default;}
 .card:hover{background:#000820;}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(100,160,255,0.6),transparent);opacity:0;transition:opacity 0.4s;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(100,160,255,0.55),transparent);opacity:0;transition:opacity 0.4s;}
 .card:hover::before{opacity:1;}
 .card-icon{width:72px;height:72px;margin-bottom:1.4rem;}
-.card-tag{font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(100,160,255,0.6);margin-bottom:0.6rem;}
-.card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:0.75rem;line-height:1.25;}
-.card p{font-size:0.8rem;color:rgba(255,255,255,0.28);line-height:1.75;font-weight:300;}
-.card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.73rem;color:rgba(255,255,255,0.18);transition:color 0.2s;}
-.card:hover .card-link{color:rgba(255,255,255,0.6);}
+.card-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(100,160,255,0.58);margin-bottom:0.55rem;}
+.card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:-0.02em;color:#fff;margin-bottom:0.75rem;line-height:1.25;}
+.card p{font-size:0.82rem;font-weight:300;color:rgba(255,255,255,0.26);line-height:1.78;}
+/* Learn more — scrolls to contact */
+.card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.5rem;font-size:0.75rem;font-weight:400;color:rgba(255,255,255,0.16);transition:color 0.2s;text-decoration:none;cursor:pointer;}
+.card:hover .card-link{color:rgba(255,255,255,0.55);}
 
 /* PHILOSOPHY */
-#philosophy{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.01);}
+#philosophy{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.008);}
 .phil-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
-.phil-quote{border-left:2px solid rgba(100,160,255,0.35);padding-left:1.2rem;font-size:1rem;font-style:italic;color:rgba(255,255,255,0.48);line-height:1.75;margin-bottom:1.8rem;font-weight:300;}
-.phil-body{font-size:0.85rem;color:rgba(255,255,255,0.24);line-height:1.9;font-weight:300;}
+.phil-quote{border-left:2px solid rgba(100,160,255,0.32);padding-left:1.25rem;font-size:1.02rem;font-style:italic;font-weight:300;color:rgba(255,255,255,0.46);line-height:1.76;margin-bottom:1.8rem;}
+.phil-body{font-size:0.86rem;font-weight:300;color:rgba(255,255,255,0.22);line-height:1.92;}
 .phil-visual{display:flex;align-items:center;justify-content:center;}
 
 /* ABOUT */
 #about{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);}
 .about-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;}
-.about-desc{font-size:0.85rem;color:rgba(255,255,255,0.24);max-width:360px;line-height:1.9;font-weight:300;}
+.about-desc{font-size:0.86rem;font-weight:300;color:rgba(255,255,255,0.22);max-width:360px;line-height:1.92;}
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.05);border-radius:12px;overflow:hidden;}
 .pillar{background:#00010a;padding:1.6rem 1.2rem;transition:background 0.3s;}
 .pillar:hover{background:#000820;}
-.pillar-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.05);margin-bottom:0.8rem;line-height:1;}
-.pillar-title{font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:800;color:rgba(255,255,255,0.7);margin-bottom:0.5rem;}
-.pillar-desc{font-size:0.72rem;color:rgba(255,255,255,0.2);line-height:1.65;font-weight:300;}
-.team-strip{margin-top:3rem;padding:1.8rem;border:1px solid rgba(255,255,255,0.05);border-radius:12px;display:flex;align-items:center;gap:2rem;background:rgba(255,255,255,0.01);}
+.pillar-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.04);margin-bottom:0.8rem;line-height:1;}
+.pillar-title{font-family:'Syne',sans-serif;font-size:0.84rem;font-weight:700;color:rgba(255,255,255,0.68);margin-bottom:0.5rem;}
+.pillar-desc{font-size:0.74rem;font-weight:300;color:rgba(255,255,255,0.2);line-height:1.68;}
+.team-strip{margin-top:3rem;padding:1.8rem;border:1px solid rgba(255,255,255,0.05);border-radius:12px;display:flex;align-items:center;gap:2rem;background:rgba(255,255,255,0.008);}
 .avatars{display:flex;}
-.av{width:36px;height:36px;border-radius:50%;border:2px solid #00010a;display:flex;align-items:center;justify-content:center;font-size:0.62rem;font-weight:600;margin-left:-10px;}
+.av{width:36px;height:36px;border-radius:50%;border:2px solid #00010a;display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:600;margin-left:-10px;}
 .av:first-child{margin-left:0;}
 .av1{background:#1a2a4a;color:#6090d0;}.av2{background:#1a2a1a;color:#4ade80;}.av3{background:#2a1a1a;color:#f06060;}.av4{background:#2a2a1a;color:#d0a040;}.av5{background:#1a1a2a;color:#9060d0;}
-.team-txt h4{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;color:rgba(255,255,255,0.75);margin-bottom:0.2rem;}
-.team-txt p{font-size:0.75rem;color:rgba(255,255,255,0.22);line-height:1.6;font-weight:300;}
-.team-badge{margin-left:auto;flex-shrink:0;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(100,160,255,0.2);border-radius:100px;color:rgba(100,160,255,0.55);}
+.team-txt h4{font-family:'Syne',sans-serif;font-size:0.86rem;font-weight:700;color:rgba(255,255,255,0.72);margin-bottom:0.22rem;}
+.team-txt p{font-size:0.76rem;font-weight:300;color:rgba(255,255,255,0.22);line-height:1.62;}
+.team-badge{margin-left:auto;flex-shrink:0;font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(100,160,255,0.2);border-radius:100px;color:rgba(100,160,255,0.52);}
 
 /* CONTACT */
 #contact{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.05);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.contact-desc{font-size:0.85rem;color:rgba(255,255,255,0.24);line-height:1.9;font-weight:300;margin-bottom:2.5rem;}
+.contact-desc{font-size:0.86rem;font-weight:300;color:rgba(255,255,255,0.22);line-height:1.92;margin-bottom:2.5rem;}
 .info-items{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,0.05);border-radius:10px;overflow:hidden;}
 .info-item{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.2rem;border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.2s;}
 .info-item:last-child{border-bottom:none;}
-.info-item:hover{background:rgba(255,255,255,0.02);}
+.info-item:hover{background:rgba(255,255,255,0.018);}
 .info-icon{width:34px;height:34px;flex-shrink:0;border:1px solid rgba(255,255,255,0.07);border-radius:8px;display:flex;align-items:center;justify-content:center;}
 .info-icon svg{width:14px;height:14px;}
-.info-lbl{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:0.15rem;}
-.info-val{font-size:0.82rem;color:rgba(255,255,255,0.5);}
-.info-val a{color:rgba(100,160,255,0.7);text-decoration:none;transition:color 0.2s;}
-.info-val a:hover{color:rgba(150,200,255,1);}
+.info-lbl{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:0.15rem;}
+.info-val{font-size:0.82rem;font-weight:400;color:rgba(255,255,255,0.48);}
+.info-val a{color:rgba(100,160,255,0.68);text-decoration:none;transition:color 0.2s;}
+.info-val a:hover{color:rgba(160,200,255,1);}
 .form{display:flex;flex-direction:column;gap:0.75rem;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;}
 .fg{display:flex;flex-direction:column;gap:0.35rem;}
-.fg label{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
-.fg input,.fg select,.fg textarea{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);color:#fff;padding:0.65rem 0.9rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:300;border-radius:8px;outline:none;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;width:100%;}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(100,160,255,0.4);background:rgba(100,160,255,0.03);}
-.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.14);}
+.fg label{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);color:#fff;padding:0.68rem 0.9rem;font-family:'Inter',sans-serif;font-size:0.84rem;font-weight:300;border-radius:8px;outline:none;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;width:100%;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(100,160,255,0.38);background:rgba(100,160,255,0.028);}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.13);}
 .fg select option{background:#00010a;}
 .fg textarea{resize:vertical;min-height:90px;}
-.submit-btn{width:100%;padding:0.85rem;background:#fff;color:#000;font-size:0.78rem;font-weight:600;border:none;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity 0.2s,transform 0.15s;margin-top:0.25rem;}
-.submit-btn:hover{opacity:0.88;transform:translateY(-1px);}
+.submit-btn{width:100%;padding:0.85rem;background:#fff;color:#000;font-size:0.8rem;font-weight:600;border:none;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity 0.2s,transform 0.15s;margin-top:0.25rem;letter-spacing:-0.01em;}
+.submit-btn:hover{opacity:0.86;transform:translateY(-1px);}
 
 /* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
-.footer-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,0.25);letter-spacing:-0.01em;}
-.footer-logo span{color:rgba(255,255,255,0.07);}
+.footer-logo{display:flex;align-items:center;gap:0.5rem;}
+.footer-logo-img{width:20px;height:20px;filter:invert(1);opacity:0.3;}
+.footer-logo-text{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:rgba(255,255,255,0.22);letter-spacing:-0.01em;}
+.footer-logo-text span{color:rgba(255,255,255,0.06);}
 .footer-links{display:flex;gap:2rem;list-style:none;}
-.footer-links a{font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.15);text-decoration:none;transition:color 0.2s;}
-.footer-links a:hover{color:rgba(255,255,255,0.5);}
+.footer-links a{font-size:0.72rem;font-weight:400;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.14);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:rgba(255,255,255,0.48);}
 .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.1);}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.72s ease,transform 0.72s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
 /* MOBILE */
@@ -161,7 +167,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">AnatolAI<span>.</span></a>
+  <a href="#hero" class="nav-logo">
+    <img class="nav-logo-img" src="data:image/png;base64,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" alt="AnatolAI">
+    <span class="nav-logo-text">AnatolAI<span>.</span></span>
+  </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#focus">Research</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
@@ -179,7 +188,6 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
   <div class="earth-glow"></div>
   <div class="atmo"></div>
 
-  <!-- Satellite top-right -->
   <svg class="sat" style="top:20%;right:11%;width:46px;height:46px;" viewBox="0 0 80 80">
     <rect x="10" y="28" width="20" height="16" rx="2" fill="#0d1e3a" stroke="#2a4a8a" stroke-width="0.8"/>
     <line x1="14" y1="28" x2="14" y2="44" stroke="#2a4a8a" stroke-width="0.5"/><line x1="19" y1="28" x2="19" y2="44" stroke="#2a4a8a" stroke-width="0.5"/><line x1="24" y1="28" x2="24" y2="44" stroke="#2a4a8a" stroke-width="0.5"/>
@@ -192,38 +200,34 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
     <line x1="40" y1="22" x2="40" y2="14" stroke="#6090d0" stroke-width="0.8"/>
     <circle cx="40" cy="12" r="2" fill="#6090d0" opacity="0.8"/>
   </svg>
-
-  <!-- Satellite top-left (smaller) -->
-  <svg class="sat" style="top:15%;left:9%;width:30px;height:30px;opacity:0.38;transform:rotate(18deg);" viewBox="0 0 80 80">
+  <svg class="sat" style="top:15%;left:9%;width:30px;height:30px;opacity:0.36;transform:rotate(18deg);" viewBox="0 0 80 80">
     <rect x="10" y="30" width="18" height="12" rx="2" fill="#0d1e3a" stroke="#2a4a8a" stroke-width="0.8"/>
     <rect x="52" y="30" width="18" height="12" rx="2" fill="#0d1e3a" stroke="#2a4a8a" stroke-width="0.8"/>
     <rect x="30" y="24" width="20" height="24" rx="3" fill="#141c2e" stroke="#3a4060" stroke-width="0.8"/>
     <circle cx="40" cy="36" r="2.5" fill="#4ade80" opacity="0.7"/>
   </svg>
-
-  <!-- Signal arcs -->
   <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice">
-    <path d="M670 155 Q570 350 400 640" fill="none" stroke="rgba(100,160,255,0.07)" stroke-width="1" stroke-dasharray="4 7"/>
-    <path d="M105 175 Q225 370 390 635" fill="none" stroke="rgba(100,160,255,0.06)" stroke-width="1" stroke-dasharray="4 7"/>
+    <path d="M670 155 Q570 350 400 640" fill="none" stroke="rgba(100,160,255,0.06)" stroke-width="1" stroke-dasharray="4 7"/>
+    <path d="M105 175 Q225 370 390 635" fill="none" stroke="rgba(100,160,255,0.05)" stroke-width="1" stroke-dasharray="4 7"/>
     <ellipse cx="400" cy="710" rx="490" ry="190" fill="none" stroke="rgba(80,140,255,0.05)" stroke-width="1" stroke-dasharray="6 10"/>
   </svg>
 
   <div class="hero-content">
-    <div class="badge"><span class="bdot"></span>Non-Terrestrial Networks · AI Research</div>
+    <div class="badge"><span class="bdot"></span>Next-Generation Wireless &amp; AI Research</div>
     <h1 class="hero-title">
       <span class="l1">Ancient Wisdom.</span>
       <span class="l2">Future Intelligence.</span>
     </h1>
     <div class="hero-div"></div>
-    <p class="hero-desc">AnatolAI pioneers ethical, human-centric AI for satellite networks, edge intelligence, and software-defined systems — rooted in the 12,000-year heritage of Anatolia.</p>
+    <p class="hero-desc">We are a deep-tech venture pioneering AI-driven solutions for 6G, Non-Terrestrial Networks, and next-generation wireless infrastructure — built by engineers who care about what comes next.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-p">Request a Demo →</a>
-      <a href="#focus" class="btn-s">Explore Research ↗</a>
+      <a href="#contact" class="btn-p">Get in touch →</a>
+      <a href="#focus" class="btn-s">Our research ↗</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">LEO / HAPS</div><div class="stat-label">Non-Terrestrial Networks</div></div>
-      <div class="stat"><div class="stat-num">Edge AI</div><div class="stat-label">Embedded Intelligence</div></div>
-      <div class="stat"><div class="stat-num">AI-SDN</div><div class="stat-label">Self-Adaptive Networks</div></div>
+      <div class="stat"><div class="stat-num">NTN &amp; HAPS</div><div class="stat-label">Non-Terrestrial Networks</div></div>
+      <div class="stat"><div class="stat-num">6G &amp; Beyond</div><div class="stat-label">Next-Gen Wireless</div></div>
+      <div class="stat"><div class="stat-num">AI-Driven</div><div class="stat-label">Network Optimisation</div></div>
     </div>
   </div>
 </section>
@@ -232,9 +236,9 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 <section id="focus">
   <div class="container">
     <div class="focus-hdr reveal">
-      <p class="sec-label">What we build</p>
-      <h2 class="sec-title">Our <span>Focus Areas</span></h2>
-      <p class="focus-sub">Three pillars of next-generation intelligent connectivity — from orbit to the edge.</p>
+      <p class="sec-label">What we work on</p>
+      <h2 class="sec-title">Focus Areas</h2>
+      <p class="focus-sub">We specialise in three interconnected domains shaping the future of wireless connectivity — from orbit to the ground.</p>
     </div>
     <div class="cards reveal">
 
@@ -259,10 +263,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
             <path d="M36 11 Q48 5 56 11" fill="none" stroke="#6090d0" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
           </svg>
         </div>
-        <p class="card-tag">NTN</p>
+        <p class="card-tag">NTN &amp; HAPS</p>
         <h3>Non-Terrestrial Networks</h3>
-        <p>Integrating AI into LEO satellites, HAPS, and UAV-based platforms to build intelligent, self-adaptive connectivity beyond ground infrastructure.</p>
-        <span class="card-link">Learn more →</span>
+        <p>Developing AI-powered solutions for LEO satellite links, High-Altitude Platform Stations, and seamless satellite-to-ground handover — the backbone of 6G connectivity.</p>
+        <a class="card-link" href="#contact">Work with us →</a>
       </div>
 
       <div class="card">
@@ -296,8 +300,8 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         </div>
         <p class="card-tag">Edge AI</p>
         <h3>Embedded Intelligence</h3>
-        <p>Lightweight AI models running directly on IoT devices, drones, and sensors — enabling real-time decision-making with ultra-low latency at the edge.</p>
-        <span class="card-link">Learn more →</span>
+        <p>Bringing AI inference directly onto drones, IoT devices, and network edge nodes — so decisions happen where the data is, without waiting for the cloud.</p>
+        <a class="card-link" href="#contact">Work with us →</a>
       </div>
 
       <div class="card">
@@ -331,10 +335,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
             <circle cx="48" cy="49" r="1" fill="#4ade80" opacity="0.8"/>
           </svg>
         </div>
-        <p class="card-tag">AI-SDN</p>
-        <h3>Software Defined Networks</h3>
-        <p>Combining SDN programmability with AI predictive power — networks that learn from real-time data, anticipate congestion, and autonomously self-optimise.</p>
-        <span class="card-link">Learn more →</span>
+        <p class="card-tag">AI Networking</p>
+        <h3>AI-Based Network Optimisation</h3>
+        <p>Using machine learning to make wireless networks self-aware — predicting congestion, optimising handovers, and adapting in real time across heterogeneous infrastructures.</p>
+        <a class="card-link" href="#contact">Work with us →</a>
       </div>
 
     </div>
@@ -349,7 +353,7 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p class="sec-label">Our philosophy</p>
         <h2 class="sec-title">Mindful<br><span>innovation.</span></h2>
         <p class="phil-quote">"True intelligence is not only measured by data and algorithms — but by purpose, ethics, and the wisdom carried through time."</p>
-        <p class="phil-body">Rooted in the deep cultural heritage of Anatolia, we believe the most powerful intelligence learns from the past, acts in the present, and imagines a better tomorrow. In a world driven by speed and automation, we stand for technologies that respect human values at every layer.</p>
+        <p class="phil-body">Rooted in the cultural heritage of Anatolia — a land where knowledge, trade, and civilisation converged for millennia — we believe the best technology is built with patience, depth, and a genuine sense of responsibility. We are not here to move fast and break things. We are here to build something that lasts.</p>
       </div>
       <div class="phil-visual reveal">
         <svg width="280" height="280" viewBox="0 0 280 280" fill="none">
@@ -392,21 +396,21 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
         <p class="sec-label">Who we are</p>
         <h2 class="sec-title">Built by<br><span>believers.</span></h2>
       </div>
-      <p class="about-desc">Engineers, researchers, and innovators united by a common vision — to build ethical, scalable AI that bridges Anatolia's legacy with humanity's next chapter.</p>
+      <p class="about-desc">A focused team of engineers and researchers working on the problems that define the next era of wireless communication — 6G, NTN, and intelligent networks.</p>
     </div>
     <div class="pillars reveal">
-      <div class="pillar"><div class="pillar-num">01</div><div class="pillar-title">AI Research</div><p class="pillar-desc">Deep expertise in machine learning, neural networks, and embedded AI systems.</p></div>
-      <div class="pillar"><div class="pillar-num">02</div><div class="pillar-title">Telecom</div><p class="pillar-desc">Advanced networking, NTN architecture, and satellite communication systems.</p></div>
-      <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">Ethics</div><p class="pillar-desc">Human-centric design principles guiding every model, every decision, every line of code.</p></div>
-      <div class="pillar"><div class="pillar-num">04</div><div class="pillar-title">Academia</div><p class="pillar-desc">Working closely with academic advisors and industry experts to stay at the frontier.</p></div>
+      <div class="pillar"><div class="pillar-num">01</div><div class="pillar-title">NTN &amp; Satellite</div><p class="pillar-desc">Deep expertise in non-terrestrial network architecture, LEO links, and HAPS systems.</p></div>
+      <div class="pillar"><div class="pillar-num">02</div><div class="pillar-title">6G Research</div><p class="pillar-desc">Hands-on research into next-generation wireless standards, air interfaces, and protocol design.</p></div>
+      <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">AI &amp; ML</div><p class="pillar-desc">Applied machine learning for network optimisation, signal processing, and real-time inference.</p></div>
+      <div class="pillar"><div class="pillar-num">04</div><div class="pillar-title">Academia</div><p class="pillar-desc">Close ties with academic institutions — keeping our work grounded in rigorous, peer-reviewed science.</p></div>
     </div>
     <div class="team-strip reveal">
       <div class="avatars">
-        <div class="av av1">AI</div><div class="av av2">TK</div><div class="av av3">SR</div><div class="av av4">ME</div><div class="av av5">NB</div>
+        <div class="av av1">BK</div><div class="av av2">TK</div><div class="av av3">SR</div><div class="av av4">ME</div><div class="av av5">NB</div>
       </div>
       <div class="team-txt">
-        <h4>A multidisciplinary team</h4>
-        <p>Engineers, researchers & collaborators across AI, telecom, and advanced networking — working toward one mission.</p>
+        <h4>A small team with a clear mission</h4>
+        <p>Engineers, researchers, and collaborators united around 6G, NTN, and AI-driven communications — working toward infrastructure that actually works for everyone.</p>
       </div>
       <div class="team-badge">Hiring</div>
     </div>
@@ -420,22 +424,30 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
       <div class="reveal">
         <p class="sec-label">Get in touch</p>
         <h2 class="sec-title">Let's build<br><span>the future.</span></h2>
-        <p class="contact-desc">Whether you're exploring a partnership, requesting a demo, or simply curious about our research — we'd love to hear from you.</p>
+        <p class="contact-desc">Whether you're a potential collaborator, a researcher, or simply curious about what we do — we'd love to hear from you. We read every message.</p>
         <div class="info-items">
           <div class="info-item">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div><div class="info-lbl">Email</div><div class="info-val">contact@anatolai.com</div></div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
             <div><div class="info-lbl">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/company/www.anatolai.com/" target="_blank">AnatolAI on LinkedIn ↗</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div><div class="info-lbl">Website</div><div class="info-val">anatolai.com</div></div>
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </div>
+            <div><div class="info-lbl">Instagram</div><div class="info-val"><a href="https://www.instagram.com/anatol.ai/" target="_blank">@anatol.ai ↗</a></div></div>
           </div>
           <div class="info-item">
-            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(100,160,255,0.6)" stroke-width="1.5" stroke-linecap="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
             <div><div class="info-lbl">Location</div><div class="info-val">Ankara, Türkiye</div></div>
           </div>
         </div>
@@ -452,9 +464,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
             <label>Area of interest</label>
             <select>
               <option value="" disabled selected>Select a focus area...</option>
-              <option>Non-Terrestrial Networks (NTN)</option>
+              <option>Non-Terrestrial Networks &amp; HAPS</option>
+              <option>6G &amp; Next-Gen Wireless</option>
               <option>Edge AI &amp; Embedded Intelligence</option>
-              <option>AI for Software Defined Networks</option>
+              <option>AI-Based Network Optimisation</option>
               <option>Partnership / Collaboration</option>
               <option>Other</option>
             </select>
@@ -469,7 +482,10 @@ footer{border-top:1px solid rgba(255,255,255,0.05);padding:2rem 3rem;display:fle
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">AnatolAI<span>.</span></div>
+  <div class="footer-logo">
+    <img class="footer-logo-img" src="data:image/png;base64,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" alt="AnatolAI">
+    <span class="footer-logo-text">AnatolAI<span>.</span></span>
+  </div>
   <ul class="footer-links">
     <li><a href="#focus">Research</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
@@ -514,7 +530,7 @@ function draw(){
 draw();
 
 // Scroll reveal
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.12});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // Mobile nav
