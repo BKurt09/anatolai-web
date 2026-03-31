@@ -14,7 +14,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#00010a;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(0,1,10,0.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(0,1,10,0.62);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
 .nav-logo{display:flex;align-items:center;gap:0.55rem;text-decoration:none;}
 .nav-logo svg{opacity:0.9;flex-shrink:0;}
 .nav-logo-text{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:-0.01em;}
@@ -72,12 +72,12 @@ footer{position:relative;z-index:1;}
 .sec-title span{color:rgba(255,255,255,0.28);}
 
 /* ── FOCUS ── */
-#focus{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.82);}
+#focus{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.55);}
 .focus-hdr{text-align:center;margin-bottom:4rem;}
 .focus-sub{font-size:0.95rem;font-weight:400;color:rgba(255,255,255,0.55);max-width:440px;margin:0 auto;line-height:1.78;}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;}
-.card{background:rgba(0,1,10,0.88);padding:2.4rem 2rem;position:relative;overflow:hidden;transition:background 0.3s;}
-.card:hover{background:rgba(3,9,32,0.95);}
+.card{background:rgba(0,3,18,0.75);padding:2.4rem 2rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.card:hover{background:rgba(3,9,32,0.88);}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(100,160,255,0.7),transparent);opacity:0;transition:opacity 0.4s;}
 .card:hover::before{opacity:1;}
 .card-icon{width:72px;height:72px;margin-bottom:1.5rem;}
@@ -89,7 +89,7 @@ footer{position:relative;z-index:1;}
 .card:hover .card-link{color:rgba(100,180,255,0.9);}
 
 /* ── PHILOSOPHY ── */
-#philosophy{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,2,14,0.85);}
+#philosophy{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,2,14,0.58);}
 .phil-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
 .phil-quote{border-left:2px solid rgba(100,160,255,0.45);padding-left:1.3rem;font-size:1.05rem;font-style:italic;font-weight:400;color:rgba(255,255,255,0.72);line-height:1.76;margin-bottom:1.8rem;}
 /* Phil body — lisible */
@@ -97,13 +97,13 @@ footer{position:relative;z-index:1;}
 .phil-visual{display:flex;align-items:center;justify-content:center;}
 
 /* ── ABOUT ── */
-#about{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.82);}
+#about{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,1,10,0.55);}
 .about-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;}
 /* About desc — lisible */
 .about-desc{font-size:0.9rem;font-weight:400;color:rgba(255,255,255,0.55);max-width:360px;line-height:1.88;}
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);border-radius:12px;overflow:hidden;}
-.pillar{background:rgba(0,1,10,0.88);padding:1.7rem 1.3rem;transition:background 0.3s;}
-.pillar:hover{background:rgba(3,9,32,0.95);}
+.pillar{background:rgba(0,3,18,0.75);padding:1.7rem 1.3rem;transition:background 0.3s;}
+.pillar:hover{background:rgba(3,9,32,0.88);}
 .pillar-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.06);margin-bottom:0.8rem;line-height:1;}
 .pillar-title{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.85);margin-bottom:0.55rem;}
 /* Pillar desc — lisible */
@@ -118,7 +118,7 @@ footer{position:relative;z-index:1;}
 .team-badge{margin-left:auto;flex-shrink:0;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.32rem 0.9rem;border:1px solid rgba(100,160,255,0.28);border-radius:100px;color:rgba(100,160,255,0.75);}
 
 /* ── CONTACT ── */
-#contact{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,2,14,0.85);}
+#contact{padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,2,14,0.58);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
 /* Contact desc — lisible */
 .contact-desc{font-size:0.9rem;font-weight:400;color:rgba(255,255,255,0.55);line-height:1.88;margin-bottom:2.5rem;}
@@ -145,7 +145,7 @@ footer{position:relative;z-index:1;}
 .submit-btn:hover{opacity:0.86;transform:translateY(-1px);}
 
 /* ── FOOTER ── */
-footer{border-top:1px solid rgba(255,255,255,0.06);padding:2rem 3rem;background:rgba(0,1,10,0.9);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+footer{border-top:1px solid rgba(255,255,255,0.06);padding:2rem 3rem;background:rgba(0,1,10,0.62);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
 .footer-logo{display:flex;align-items:center;gap:0.5rem;}
 .footer-logo svg{opacity:0.35;}
 .footer-logo-text{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:rgba(255,255,255,0.3);letter-spacing:-0.01em;}
@@ -505,188 +505,320 @@ footer{border-top:1px solid rgba(255,255,255,0.06);padding:2rem 3rem;background:
 </footer>
 
 <script>
-// ── Starfield with multiple animated satellites ──
+// ── ULTRA-REALISTIC SPACE SCENE ──
 const canvas = document.getElementById('starfield');
 const ctx = canvas.getContext('2d');
-function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
-resize(); window.addEventListener('resize',resize);
 
-// Stars
-const stars = Array.from({length:320},()=>({
-  x:Math.random(), y:Math.random(),
-  r:Math.random()*1.4+0.2,
-  a:Math.random()*0.75+0.2,
-  tw:Math.random()*Math.PI*2,
-  sp:Math.random()*0.02+0.004
-}));
+function resize(){
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
 
-// Shooting stars
-const shoots=[];
-setInterval(()=>{
-  shoots.push({x:Math.random()*0.7+0.1,y:Math.random()*0.3,len:Math.random()*0.08+0.03,sp:Math.random()*0.006+0.003,a:1,fade:Math.random()*0.018+0.01});
-},3500);
-
-// Satellites — each with its own orbit path
-const satellites = [
-  // Main large sat — top right, slow
-  {
-    ox:0.75, oy:0.18,    // orbit center (fraction of screen)
-    rx:0.12, ry:0.04,    // orbit radii
-    angle:0, speed:0.004,
-    size:1.0, opacity:0.72,
-    rotation: -20        // degrees
-  },
-  // Mid sat — top left area
-  {
-    ox:0.22, oy:0.14,
-    rx:0.08, ry:0.025,
-    angle:2.0, speed:0.006,
-    size:0.65, opacity:0.4,
-    rotation: 15
-  },
-  // Small fast sat — upper middle
-  {
-    ox:0.55, oy:0.1,
-    rx:0.15, ry:0.03,
-    angle:4.0, speed:0.009,
-    size:0.5, opacity:0.3,
-    rotation: 0
-  },
-  // Tiny distant sat — far right
-  {
-    ox:0.88, oy:0.28,
-    rx:0.06, ry:0.02,
-    angle:1.0, speed:0.005,
-    size:0.4, opacity:0.22,
-    rotation: 30
-  }
+// ── Stars: 3 layers (far/mid/near) with different sizes & twinkle speeds ──
+const starLayers = [
+  Array.from({length:200}, ()=>({ x:Math.random(), y:Math.random()*0.85, r:Math.random()*0.6+0.1, a:Math.random()*0.4+0.1, tw:Math.random()*Math.PI*2, sp:Math.random()*0.008+0.002 })),
+  Array.from({length:120}, ()=>({ x:Math.random(), y:Math.random()*0.85, r:Math.random()*0.9+0.3, a:Math.random()*0.5+0.25, tw:Math.random()*Math.PI*2, sp:Math.random()*0.015+0.005 })),
+  Array.from({length:40},  ()=>({ x:Math.random(), y:Math.random()*0.7,  r:Math.random()*1.4+0.6, a:Math.random()*0.7+0.4, tw:Math.random()*Math.PI*2, sp:Math.random()*0.025+0.01  })),
 ];
 
-function drawSatellite(ctx, x, y, size, opacity, rotation){
+// ── Nebula clouds (static, painted once) ──
+const nebulae = [
+  { x:0.18, y:0.12, rx:0.22, ry:0.08, color:'rgba(60,80,180,0.028)' },
+  { x:0.72, y:0.08, rx:0.18, ry:0.06, color:'rgba(100,60,160,0.022)' },
+  { x:0.45, y:0.22, rx:0.28, ry:0.07, color:'rgba(80,140,200,0.018)' },
+];
+
+// ── Shooting stars pool ──
+const shoots = [];
+setInterval(()=>{
+  if(shoots.length < 4)
+    shoots.push({ x:Math.random()*0.65+0.1, y:Math.random()*0.28, len:Math.random()*0.09+0.04, sp:Math.random()*0.007+0.003, a:1, fade:Math.random()*0.016+0.009 });
+}, 2800);
+
+// ── Satellite definitions ──
+// Each sat: orbit center (fraction), radii, angle, speed, size, tilt
+const sats = [
+  { ox:0.74, oy:0.16, rx:0.13, ry:0.042, angle:0,    speed:0.0038, size:14, alpha:0.85, tilt:-18 },
+  { ox:0.22, oy:0.13, rx:0.09, ry:0.028, angle:2.1,  speed:0.0058, size:9,  alpha:0.52, tilt:12  },
+  { ox:0.52, oy:0.09, rx:0.16, ry:0.032, angle:4.3,  speed:0.0082, size:7,  alpha:0.38, tilt:0   },
+  { ox:0.87, oy:0.25, rx:0.07, ry:0.022, angle:1.0,  speed:0.0045, size:6,  alpha:0.28, tilt:25  },
+  { ox:0.35, oy:0.19, rx:0.11, ry:0.026, angle:3.5,  speed:0.0065, size:5,  alpha:0.22, tilt:-8  },
+];
+
+
+
+// ── Draw a detailed satellite ──
+function drawSat(x, y, size, alpha, tiltDeg, angle){
   ctx.save();
   ctx.translate(x, y);
-  ctx.rotate(rotation * Math.PI / 180);
-  ctx.globalAlpha = opacity;
+  ctx.rotate((tiltDeg + angle * 6) * Math.PI / 180);
+  ctx.globalAlpha = alpha;
+  const s = size / 14; // normalised scale
 
-  const s = size;
-  // Solar panel left
-  ctx.fillStyle = '#0d1e3a';
-  ctx.strokeStyle = 'rgba(60,100,200,0.7)';
-  ctx.lineWidth = 0.6;
+  // --- Main body ---
+  // Body gradient
+  const bodyGrad = ctx.createLinearGradient(-8*s, -6*s, 8*s, 6*s);
+  bodyGrad.addColorStop(0, '#1e2a42');
+  bodyGrad.addColorStop(0.5, '#2a3a58');
+  bodyGrad.addColorStop(1, '#111c2e');
   ctx.beginPath();
-  roundRect(ctx, -22*s, -4*s, 14*s, 8*s, 1.5*s);
-  ctx.fill(); ctx.stroke();
-  // Panel lines
-  ctx.strokeStyle = 'rgba(60,100,200,0.35)';
-  ctx.lineWidth = 0.4;
-  [-17,-13,-10].map(v=>v*s).forEach(px=>{
-    ctx.beginPath(); ctx.moveTo(px,-4*s); ctx.lineTo(px,4*s); ctx.stroke();
-  });
-  // Solar panel right
-  ctx.fillStyle = '#0d1e3a';
-  ctx.strokeStyle = 'rgba(60,100,200,0.7)';
-  ctx.lineWidth = 0.6;
-  ctx.beginPath();
-  roundRect(ctx, 8*s, -4*s, 14*s, 8*s, 1.5*s);
-  ctx.fill(); ctx.stroke();
-  ctx.strokeStyle = 'rgba(60,100,200,0.35)';
-  ctx.lineWidth = 0.4;
-  [11,15,19].map(v=>v*s).forEach(px=>{
-    ctx.beginPath(); ctx.moveTo(px,-4*s); ctx.lineTo(px,4*s); ctx.stroke();
-  });
-  // Body
-  ctx.fillStyle = '#141c2e';
-  ctx.strokeStyle = 'rgba(80,120,200,0.55)';
-  ctx.lineWidth = 0.8;
-  ctx.beginPath();
-  roundRect(ctx, -8*s, -6*s, 16*s, 12*s, 2*s);
-  ctx.fill(); ctx.stroke();
-  // LED
-  const led = 0.6 + Math.sin(Date.now()*0.004 + opacity*10)*0.4;
-  ctx.beginPath();
-  ctx.arc(0, 0, 2.5*s, 0, Math.PI*2);
-  ctx.fillStyle = `rgba(74,222,128,${led})`;
+  roundRect(ctx, -9*s, -7*s, 18*s, 14*s, 2.5*s);
+  ctx.fillStyle = bodyGrad;
   ctx.fill();
-  // Antenna
-  ctx.strokeStyle = 'rgba(150,190,255,0.6)';
+  ctx.strokeStyle = 'rgba(80,130,220,0.65)';
+  ctx.lineWidth = 0.9;
+  ctx.stroke();
+
+  // Body panel lines
+  ctx.strokeStyle = 'rgba(80,130,220,0.22)';
+  ctx.lineWidth = 0.4;
+  [-3*s, 0, 3*s].forEach(py => {
+    ctx.beginPath(); ctx.moveTo(-8*s, py); ctx.lineTo(8*s, py); ctx.stroke();
+  });
+  ctx.beginPath(); ctx.moveTo(0, -6*s); ctx.lineTo(0, 6*s); ctx.stroke();
+
+  // --- Solar panel left ---
+  drawSolarPanel(ctx, -24*s, -5*s, 16*s, 10*s, s, true);
+
+  // --- Solar panel right ---
+  drawSolarPanel(ctx, 8*s, -5*s, 16*s, 10*s, s, false);
+
+  // Connector arms
+  ctx.fillStyle = 'rgba(30,45,70,0.9)';
+  ctx.strokeStyle = 'rgba(60,100,180,0.4)';
+  ctx.lineWidth = 0.5;
+  ctx.beginPath(); roundRect(ctx, -22*s, -2*s, 14*s, 4*s, 1*s); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); roundRect(ctx,   8*s, -2*s, 14*s, 4*s, 1*s); ctx.fill(); ctx.stroke();
+
+  // --- Antenna dish ---
+  ctx.strokeStyle = 'rgba(160,200,255,0.7)';
   ctx.lineWidth = 0.8;
-  ctx.beginPath(); ctx.moveTo(0,-6*s); ctx.lineTo(0,-11*s); ctx.stroke();
+  // Arm
+  ctx.beginPath(); ctx.moveTo(2*s, -7*s); ctx.lineTo(5*s, -14*s); ctx.stroke();
+  // Dish arc
   ctx.beginPath();
-  ctx.arc(0,-11*s,1.8*s,0,Math.PI*2);
-  ctx.fillStyle = 'rgba(150,190,255,0.75)';
+  ctx.arc(5*s, -14*s, 4*s, Math.PI * 0.85, Math.PI * 1.65);
+  ctx.strokeStyle = 'rgba(160,200,255,0.65)';
+  ctx.lineWidth = 1.2;
+  ctx.stroke();
+  // Focal point
+  ctx.beginPath(); ctx.arc(5*s, -14*s, 1.2*s, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(160,200,255,0.9)';
   ctx.fill();
+
+  // --- Status LEDs ---
+  const led1 = 0.6 + Math.sin(Date.now()*0.004 + alpha*5)*0.4;
+  const led2 = 0.5 + Math.sin(Date.now()*0.003 + alpha*8)*0.5;
+  ctx.beginPath(); ctx.arc(-3*s, 0, 2*s, 0, Math.PI*2);
+  ctx.fillStyle = `rgba(74,222,128,${led1})`; ctx.fill();
+  ctx.beginPath(); ctx.arc(3*s, 0, 1.4*s, 0, Math.PI*2);
+  ctx.fillStyle = `rgba(100,180,255,${led2})`; ctx.fill();
+
+  // --- Thruster nozzle ---
+  ctx.fillStyle = 'rgba(20,30,50,0.9)';
+  ctx.strokeStyle = 'rgba(60,90,140,0.5)';
+  ctx.lineWidth = 0.6;
+  ctx.beginPath(); roundRect(ctx, -4*s, 7*s, 8*s, 4*s, 1*s); ctx.fill(); ctx.stroke();
+  // Thruster glow (random flicker)
+  if(Math.random() > 0.92){
+    const tg = ctx.createRadialGradient(0, 14*s, 0, 0, 14*s, 6*s);
+    tg.addColorStop(0, 'rgba(80,160,255,0.5)');
+    tg.addColorStop(1, 'rgba(80,160,255,0)');
+    ctx.beginPath(); ctx.arc(0, 13*s, 6*s, 0, Math.PI*2);
+    ctx.fillStyle = tg; ctx.fill();
+  }
 
   ctx.globalAlpha = 1;
   ctx.restore();
 }
 
-function roundRect(ctx, x, y, w, h, r){
-  ctx.beginPath();
-  ctx.moveTo(x+r, y);
-  ctx.lineTo(x+w-r, y);
-  ctx.quadraticCurveTo(x+w, y, x+w, y+r);
-  ctx.lineTo(x+w, y+h-r);
-  ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
-  ctx.lineTo(x+r, y+h);
-  ctx.quadraticCurveTo(x, y+h, x, y+h-r);
-  ctx.lineTo(x, y+r);
-  ctx.quadraticCurveTo(x, y, x+r, y);
-  ctx.closePath();
+function drawSolarPanel(ctx, x, y, w, h, s, isLeft){
+  // Panel bg with gradient
+  const grad = ctx.createLinearGradient(x, y, x+w, y+h);
+  grad.addColorStop(0, '#0a1828');
+  grad.addColorStop(0.5, '#0d2240');
+  grad.addColorStop(1, '#081420');
+  ctx.beginPath(); roundRect(ctx, x, y, w, h, 1.5*s);
+  ctx.fillStyle = grad; ctx.fill();
+  ctx.strokeStyle = 'rgba(60,110,200,0.6)'; ctx.lineWidth = 0.7; ctx.stroke();
+
+  // Solar cells grid
+  const cols = 4, rows = 2;
+  const cw = w/cols, ch = h/rows;
+  for(let r=0; r<rows; r++){
+    for(let c=0; c<cols; c++){
+      ctx.beginPath();
+      roundRect(ctx, x+c*cw+0.8, y+r*ch+0.8, cw-1.6, ch-1.6, 0.5);
+      ctx.fillStyle = `rgba(${10+c*4},${30+r*10},${80+c*8},0.9)`;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(60,110,200,0.18)'; ctx.lineWidth = 0.3; ctx.stroke();
+    }
+  }
+  // Reflection highlight
+  ctx.beginPath(); roundRect(ctx, x+1, y+1, w*0.35, h*0.28, 0.8);
+  ctx.fillStyle = 'rgba(100,160,255,0.08)'; ctx.fill();
 }
 
+function roundRect(c, x, y, w, h, r){
+  c.beginPath();
+  c.moveTo(x+r,y); c.lineTo(x+w-r,y); c.quadraticCurveTo(x+w,y,x+w,y+r);
+  c.lineTo(x+w,y+h-r); c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  c.lineTo(x+r,y+h); c.quadraticCurveTo(x,y+h,x,y+h-r);
+  c.lineTo(x,y+r); c.quadraticCurveTo(x,y,x+r,y);
+  c.closePath();
+}
+
+
+
 let tick = 0;
+
 function draw(){
-  const W=canvas.width, H=canvas.height;
+  const W = canvas.width, H = canvas.height;
   ctx.clearRect(0,0,W,H);
 
-  // Deep space background
+  // ── Deep space background gradient ──
   const bg = ctx.createLinearGradient(0,0,0,H);
-  bg.addColorStop(0,'#00010a');
-  bg.addColorStop(0.6,'#00020f');
-  bg.addColorStop(1,'#010820');
-  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+  bg.addColorStop(0,    '#00000d');
+  bg.addColorStop(0.35, '#00010e');
+  bg.addColorStop(0.7,  '#000212');
+  bg.addColorStop(1,    '#010520');
+  ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
 
-  // Milky way
-  const mw = ctx.createLinearGradient(0,H*0.05,W,H*0.55);
-  mw.addColorStop(0,'transparent');
-  mw.addColorStop(0.4,'rgba(160,180,255,0.018)');
-  mw.addColorStop(0.6,'rgba(180,200,255,0.028)');
-  mw.addColorStop(1,'transparent');
-  ctx.fillStyle=mw; ctx.fillRect(0,0,W,H);
+  // ── Milky way / galactic band ──
+  const mw = ctx.createLinearGradient(W*0.05, H*0.02, W*0.9, H*0.6);
+  mw.addColorStop(0,   'transparent');
+  mw.addColorStop(0.3, 'rgba(140,160,220,0.018)');
+  mw.addColorStop(0.5, 'rgba(180,200,255,0.030)');
+  mw.addColorStop(0.7, 'rgba(160,140,220,0.020)');
+  mw.addColorStop(1,   'transparent');
+  ctx.fillStyle = mw; ctx.fillRect(0,0,W,H);
+
+  // ── Nebula patches ──
+  nebulae.forEach(n=>{
+    const ng = ctx.createRadialGradient(n.x*W, n.y*H, 0, n.x*W, n.y*H, n.rx*W);
+    ng.addColorStop(0, n.color);
+    ng.addColorStop(1, 'transparent');
+    ctx.save();
+    ctx.scale(1, n.ry/n.rx);
+    ctx.beginPath();
+    ctx.arc(n.x*W, n.y*H*(n.rx/n.ry), n.rx*W, 0, Math.PI*2);
+    ctx.fillStyle = ng; ctx.fill();
+    ctx.restore();
+  });
 
   tick += 0.012;
 
-  // Stars
-  stars.forEach(s=>{
-    const tw = Math.sin(tick*s.sp*8 + s.tw);
-    ctx.beginPath();
-    ctx.arc(s.x*W, s.y*H, s.r, 0, Math.PI*2);
-    ctx.fillStyle=`rgba(255,255,255,${s.a*(0.55+0.45*tw)})`;
-    ctx.fill();
+  // ── Stars ──
+  starLayers.forEach((layer, li)=>{
+    layer.forEach(s=>{
+      const tw = Math.sin(tick*s.sp*8 + s.tw);
+      const alpha = s.a * (0.5 + 0.5*tw);
+      ctx.beginPath();
+      ctx.arc(s.x*W, s.y*H, s.r, 0, Math.PI*2);
+      // Slight blue tint for distant stars, warm for near
+      if(li === 2) ctx.fillStyle = `rgba(200,215,255,${alpha})`;
+      else if(li === 1) ctx.fillStyle = `rgba(220,225,255,${alpha})`;
+      else ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fill();
+    });
   });
 
-  // Shooting stars
-  for(let i=shoots.length-1;i>=0;i--){
-    const sh=shoots[i];
+  // Star clusters (dense spots)
+  [[0.08,0.05],[0.62,0.03],[0.91,0.14]].forEach(([cx,cy])=>{
+    for(let i=0;i<8;i++){
+      const sx = (cx + (Math.random()-0.5)*0.04)*W;
+      const sy = (cy + (Math.random()-0.5)*0.03)*H;
+      ctx.beginPath(); ctx.arc(sx,sy,0.4,0,Math.PI*2);
+      ctx.fillStyle = `rgba(200,220,255,${Math.random()*0.3+0.1})`; ctx.fill();
+    }
+  });
+
+  // ── Shooting stars ──
+  for(let i=shoots.length-1; i>=0; i--){
+    const sh = shoots[i];
     const x1=sh.x*W, y1=sh.y*H;
-    const x2=x1+sh.len*W*0.55, y2=y1+sh.len*H*0.32;
-    const g=ctx.createLinearGradient(x1,y1,x2,y2);
-    g.addColorStop(0,'rgba(255,255,255,0)');
-    g.addColorStop(1,`rgba(255,255,255,${sh.a})`);
+    const x2=x1+sh.len*W*0.6, y2=y1+sh.len*H*0.35;
+    const g = ctx.createLinearGradient(x1,y1,x2,y2);
+    g.addColorStop(0, 'rgba(255,255,255,0)');
+    g.addColorStop(0.6, `rgba(200,220,255,${sh.a*0.6})`);
+    g.addColorStop(1, `rgba(255,255,255,${sh.a})`);
     ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2);
-    ctx.strokeStyle=g; ctx.lineWidth=1.2; ctx.stroke();
-    sh.x-=sh.sp*0.7; sh.y+=sh.sp*0.38;
-    sh.a-=sh.fade;
+    ctx.strokeStyle = g; ctx.lineWidth = 1.4; ctx.stroke();
+    // Head glow
+    const hg = ctx.createRadialGradient(x2,y2,0,x2,y2,3);
+    hg.addColorStop(0,`rgba(200,230,255,${sh.a*0.8})`); hg.addColorStop(1,'transparent');
+    ctx.beginPath(); ctx.arc(x2,y2,3,0,Math.PI*2); ctx.fillStyle=hg; ctx.fill();
+    sh.x -= sh.sp*0.72; sh.y += sh.sp*0.4; sh.a -= sh.fade;
     if(sh.a<=0) shoots.splice(i,1);
   }
 
-  // Animated satellites
-  satellites.forEach(sat=>{
-    sat.angle += sat.speed;
-    const sx = (sat.ox + Math.cos(sat.angle)*sat.rx) * W;
-    const sy = (sat.oy + Math.sin(sat.angle)*sat.ry) * H;
-    drawSatellite(ctx, sx, sy, sat.size, sat.opacity, sat.rotation + sat.angle*8);
+  // ── LEO orbit rings (faint dashed ellipses) ──
+  const orbits = [
+    {cx:0.5, cy:-0.05, rx:0.55, ry:0.18, tilt:8,  a:0.06},
+    {cx:0.5, cy:-0.08, rx:0.48, ry:0.14, tilt:-5, a:0.04},
+    {cx:0.5, cy:-0.02, rx:0.62, ry:0.20, tilt:15, a:0.03},
+  ];
+  orbits.forEach(o=>{
+    ctx.save();
+    ctx.translate(o.cx*W, o.cy*H);
+    ctx.rotate(o.tilt * Math.PI/180);
+    ctx.setLineDash([4, 7]);
+    ctx.strokeStyle = `rgba(80,140,255,${o.a})`;
+    ctx.lineWidth = 0.7;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, o.rx*W, o.ry*H, 0, 0, Math.PI*2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
   });
+
+  // ── Signal lines (sat → ground, permanent faint) ──
+  sats.forEach(sat=>{
+    const sx = (sat.ox + Math.cos(sat.angle)*sat.rx)*W;
+    const sy = (sat.oy + Math.sin(sat.angle)*sat.ry)*H;
+    const gx = W*0.5, gy = H*0.95;
+    const lg = ctx.createLinearGradient(sx,sy,gx,gy);
+    lg.addColorStop(0, 'rgba(100,160,255,0.08)');
+    lg.addColorStop(1, 'rgba(100,160,255,0)');
+    ctx.save(); ctx.setLineDash([3,8]);
+    ctx.strokeStyle = lg; ctx.lineWidth = 0.6;
+    ctx.beginPath(); ctx.moveTo(sx,sy); ctx.lineTo(gx,gy); ctx.stroke();
+    ctx.setLineDash([]); ctx.restore();
+  });
+
+
+
+  // ── Draw satellites ──
+  sats.forEach(sat=>{
+    sat.angle += sat.speed;
+    const sx = (sat.ox + Math.cos(sat.angle)*sat.rx)*W;
+    const sy = (sat.oy + Math.sin(sat.angle)*sat.ry)*H;
+    drawSat(sx, sy, sat.size, sat.alpha, sat.tilt, sat.angle);
+  });
+
+  // ── Earth atmosphere glow at very bottom ──
+  const ea = ctx.createLinearGradient(0, H*0.78, 0, H);
+  ea.addColorStop(0, 'transparent');
+  ea.addColorStop(0.5, 'rgba(30,80,180,0.06)');
+  ea.addColorStop(1,   'rgba(20,60,160,0.12)');
+  ctx.fillStyle = ea; ctx.fillRect(0, H*0.78, W, H*0.22);
+
+  // Earth curve hint
+  ctx.save();
+  ctx.beginPath();
+  ctx.ellipse(W/2, H*1.18, W*0.7, H*0.35, 0, 0, Math.PI*2);
+  const ecg = ctx.createRadialGradient(W/2, H*1.18, 0, W/2, H*1.18, W*0.7);
+  ecg.addColorStop(0, 'rgba(30,80,200,0.0)');
+  ecg.addColorStop(0.7,'rgba(30,80,200,0.04)');
+  ecg.addColorStop(1,  'rgba(60,140,255,0.08)');
+  ctx.fillStyle = ecg; ctx.fill();
+  // Atmosphere thin line
+  ctx.beginPath();
+  ctx.ellipse(W/2, H*1.18, W*0.7, H*0.35, 0, Math.PI*1.12, Math.PI*1.88);
+  ctx.strokeStyle = 'rgba(80,160,255,0.12)'; ctx.lineWidth = 2; ctx.stroke();
+  ctx.restore();
 
   requestAnimationFrame(draw);
 }
